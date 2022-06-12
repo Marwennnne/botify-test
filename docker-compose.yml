@@ -6,6 +6,7 @@ services:
     environment:
       - HOST=${HOST}
       - PORT=${PORT}
+    restart: always
     networks:
       - local
   nginx:
@@ -14,6 +15,7 @@ services:
       args:
         SERVICE_NAME: app
         PORT: ${PORT}
+    restart: always
     ports:
       - 80:80
     depends_on:
