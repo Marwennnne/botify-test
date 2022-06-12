@@ -32,7 +32,7 @@ How would you scale this application so it can serve a high number of requests?
 - Add a load balancer in front of multiple instance running the flask app
 - If we are using k8s, We deploy the metrics-server and HorizontalPodScaler with our Flask app deployment
 
-## POpen suggestions:
+## Open suggestions:
 
 What else would you like to improve before pushing this application to production?
 
