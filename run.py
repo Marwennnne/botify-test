@@ -1,6 +1,7 @@
 from flask import Flask, escape, request, render_template
 from random import random, choice
 from copy import deepcopy
+import os
 
 app = Flask(__name__)
 
@@ -230,4 +231,4 @@ def automove(direction, last_encoding, score):
     return render_grid(grid, score, False, suggested_move, autoplay = True)
     
 if __name__ == "__main__":
-    app.run(debug=False, port = 5000, host = "0.0.0.0")
+    app.run(debug=False, port = os.getenv('PORT'), host = os.getenv('HOST'))
