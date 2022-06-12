@@ -1,0 +1,26 @@
+version: "3.8"
+
+services:
+  app:
+    build: .
+    environment:
+      - HOST=${HOST}
+      - PORT=${PORT}
+    networks:
+      - local
+  nginx:
+    build:
+      context: ./nginx
+      args:
+        SERVICE_NAME: app
+        PORT: ${PORT}
+    ports:
+      - 80:80
+    depends_on:
+      - app
+    networks:
+      - local
+
+networks:
+  local:
+    driver: bridge
