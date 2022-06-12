@@ -16,7 +16,7 @@ docker-compose up
 
 Which points would you improve on the security aspects?
 
-- add WAF capabilities to our proxy to the best possible level of protection
+- add WAF capabilities to our proxy to have the best possible level of protection
 - use official images and packages
 
 If we ever add a database to stock users’ results, how do you plan to backup the application?
